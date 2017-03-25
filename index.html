@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3动画人物走动</title>
+	<style type="text/css">
+		div {
+			float:left;
+		}
+		.person {
+			width:115px;
+			height:140px;
+			background:url(pic/person.png) no-repeat;
+			-webkit-animation:runner .8s infinite steps(9);
+		}
+		
+		@-webkit-keyframes runner {
+			100% {background-position: -1080px 0}
+		}
+
+		.monster {
+			width:190px;
+			height:240px;
+			background:url(pic/monster.png) no-repeat;
+			-webkit-animation:monster .8s infinite steps(10);
+		}
+
+		@-webkit-keyframes monster {
+			100% {background-position:-1900px 0;}
+		}
+
+		.second {
+			position:relative;
+			width:100px;
+			height:100px;
+			background:#E9E3D1;
+			border:4px solid #C9BFAD;
+			border-radius:50%;
+		}
+		.second i {
+			position: absolute;
+			top:50%;
+			width:50%;
+			height:2px;
+			margin-top:-1px;
+			background: red;
+			-webkit-animation:rotation 60s infinite steps(60);
+			-webkit-transform-origin:100% 50%;
+		}
+		@-webkit-keyframes rotation {
+			0% {-webkit-transform:rotate(90deg);}
+			100% {-webkit-transform:rotate(450deg);}
+		}
+	</style>
+</head>
+<body>
+	<div class="person"></div>
+
+	<div class="monster"></div>
+
+	<div class="second"><i></i></div>
+
+</body>
+</html>
